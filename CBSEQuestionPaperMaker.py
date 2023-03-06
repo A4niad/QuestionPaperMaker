@@ -5,4 +5,4 @@ def fac(num):
         f *= i
     return f
 
-print(fac(101))
+print(fac(1010))
