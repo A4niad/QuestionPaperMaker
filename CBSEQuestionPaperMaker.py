@@ -1,8 +1,3 @@
-
-def fac(num):
-    f = 1
-    for i in range(2, num+1):
-        f *= i
-    return f
-
-print(fac(1010))
+# we will eventually code here brothers
+# our day will come
+# and we will make the lamest program possible
