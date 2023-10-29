@@ -1,6 +1,6 @@
 # CBSE Question Paper Maker
 
-A web app to generate sample CBSE Question Papers. Made using Python, Flask, and SQL.
+A desktop app to generate sample CBSE Question Papers. Made using Python, Tkinter, and SQL.
 
 ## Setup
 
@@ -8,8 +8,8 @@ Follow the given steps to setup and run the app.
 
 #### Requirements
 
-- Python 3.11.1
-- Flask
+- Python 3.11
+- Tkinter
 - SQL libraries
 
 #### Steps
@@ -20,8 +20,7 @@ Follow the given steps to setup and run the app.
 4. Create virtual environment using command `python -m venv venv`.
 5. Activate the virtual environment using command `./venv/Scripts/activate`
 6. Run `pip install -r requirements.txt` to install dependencies.
-7. Run `python CBSEQuestionPaperMaker.py` in the command prompt to launch the flask server.
-8. Go to [Flask Server](http://127.0.0.1:5000) in your browser to see the web app.
+7. Run `python CBSEQuestionPaperMaker.py` in the command prompt to launch the app.
 
 > The server will stop if you close the command prompt, so dont close it.
 
@@ -30,6 +29,6 @@ Follow the given steps to setup and run the app.
 - `requirements.txt` contains the python libraries required for the project.
 - `requirements_dev.txt` contains optional tool libraries such as formatter.
 - `CBSEQuestionPaperMaker.py` is the main file where the program starts.
+- `database.py` contains functionality to fetch questions from database.
+- `data.py` contains data to store in the database.
 - `config.json` contains some required project settings configurations.
-- `layout.html` is the base layout of the website it should be extended by other templates.
-- `index.html` is the home page of our website.

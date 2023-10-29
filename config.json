@@ -1,5 +1,22 @@
 {
-    "params": {
-        "title": "CBSE Question Paper Generator"
+    "user": "root",
+    "password": "root-mysql-password",
+    "database": "cbse_questions",
+    "available_subjects": [ "physics" ],
+    "section_headers": {
+        "mcq": "\nSECTION: A \nThe following questions are multiple-choice questions with one correct answer. Each question carries 1 mark each\n\n",
+        "sa": "\nSECTION: B\nThe following questions are very short answer type questions. Each question carries 2 marks each\n\n",
+        "ma": "\nSECTION: C\nThe following questions are short answer type questions. Each question carries 3 marks each\n\n",
+        "cb": "\nSECTION: D\nThe following questions are case-study based questions. Each case study carries 4 marks each\n\n",
+        "la": "\nSECTION: E\nThe following questions are long answer type questions. Each question carries 5 mark\n\n"
+    },
+    "paper_layouts": {
+        "physics": {
+            "mcq": 16,
+            "sa": 5,
+            "ma": 7,
+            "cb": 2,
+            "la": 3
+        }
     }
 }
