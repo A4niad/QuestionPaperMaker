@@ -20,9 +20,8 @@ Follow the given steps to setup and run the app.
 4. Create virtual environment using command `python -m venv venv`.
 5. Activate the virtual environment using command `./venv/Scripts/activate`
 6. Run `pip install -r requirements.txt` to install dependencies.
-7. Run `python CBSEQuestionPaperMaker.py` in the command prompt to launch the app.
-
-> The server will stop if you close the command prompt, so dont close it.
+7. Create an 'out' directory for output questions txt files `mkdir out`.
+8. Run `python CBSEQuestionPaperMaker.py` in the command prompt to launch the app.
 
 ## Project File Overview
 
