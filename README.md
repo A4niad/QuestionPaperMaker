@@ -21,7 +21,8 @@ Follow the given steps to setup and run the app.
 5. Activate the virtual environment using command `./venv/Scripts/activate`
 6. Run `pip install -r requirements.txt` to install dependencies.
 7. Create an 'out' directory for output questions txt files `mkdir out`.
-8. Run `python CBSEQuestionPaperMaker.py` in the command prompt to launch the app.
+8. Open `config.json` and edit the user and password fields with your MySQL details
+9. Run `python CBSEQuestionPaperMaker.py` in the command prompt to launch the app.
 
 ## Project File Overview
 
