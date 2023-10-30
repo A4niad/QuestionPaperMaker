@@ -199,14 +199,14 @@ def generatePaper():
         statusUpdate("Subject Questions Currently Unavailable")
 
     else:
-        quesiton_paper = ""
+        question_paper = ""
         layout = config["paper_layouts"][subject]
         questions = {i: db.get_questions(subject, i) for i in layout}
 
         count = 1
-        quesiton_paper += f"QUESTION PAPER\nSUBJECT: {subject.upper()}\nMAX MARKS: 70\n\n"
+        question_paper += f"QUESTION PAPER\nSUBJECT: {subject.upper()}\nMAX MARKS: 70\n\n"
         for qtype in questions:
-            quesiton_paper += config["section_headers"][qtype]
+            question_paper += config["section_headers"][qtype]
 
             if len(questions[qtype]) >= layout[qtype]:
                 random_questions = random.sample(questions[qtype], layout[qtype])
@@ -220,30 +220,30 @@ def generatePaper():
                     # Handles (m)ultiple-(c)hoice (q)uestions
                     options = q[2].split("\n")
                     opstr = "\n".join([n_opt[i] + s for i, s in enumerate(options)])
-                    quesiton_paper += f"Q{count}) {q[0]}{opstr}\n\n"
+                    question_paper += f"Q{count}) {q[0]}{opstr}\n\n"
 
                 elif qtype in ["sa", "ma", "la"]:
                     # Handles (s)hort (a)nswers, (m)edium (a)nswers & (l)ong (a)nswers
-                    quesiton_paper += f"Q{count}) {q[0]}\n\n"
+                    question_paper += f"Q{count}) {q[0]}\n\n"
 
                 elif qtype == "cb":
                     # Handles (c)ase-study-(b)ased questions
-                    quesiton_paper += f"Q{count}) {q[0]}\n\n"
+                    question_paper += f"Q{count}) {q[0]}\n\n"
                     for i, subq in enumerate(q[4]):
                         if subq[2] == "mcq":
                             options = subq[3].split("\n")
                             opstr = "\n".join([n_opt[i] + s for i, s in enumerate(options)])
-                            quesiton_paper += f"Q{count}.{i + 1}) {subq[1]}\n{opstr}\n\n"
+                            question_paper += f"Q{count}.{i + 1}) {subq[1]}\n{opstr}\n\n"
                         else:
-                            quesiton_paper += f"Q{count}.{i + 1}) {subq[1]}\n\n"
+                            question_paper += f"Q{count}.{i + 1}) {subq[1]}\n\n"
 
                 count += 1
 
-            quesiton_paper += "\n"
+            question_paper += "\n"
 
         with open(f"out/QP({subject}).txt", "w+") as out_file:
             try:
-                out_file.write(quesiton_paper)
+                out_file.write(question_paper)
             except Exception as e:
                 print(e)
                 print("Question paper file not created! Error occured while parsing question data")
@@ -251,7 +251,7 @@ def generatePaper():
 
         statusUpdate("Paper Created!")
 
-        displayPaper(quesiton_paper)
+        displayPaper(question_paper)
 
 
 def statusUpdate(text):
