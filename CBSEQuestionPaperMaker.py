@@ -72,7 +72,7 @@ def generatePaper():
     if not subject:
         statusUpdate("Select Subject")
     elif subject not in config["available_subjects"]:
-        statusUpdate("Subject questions currently unavailable")
+        statusUpdate("Subject Questions Currently Unavailable")
     else:
         quesiton_paper = ""
         layout = config["paper_layouts"][subject]

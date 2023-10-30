@@ -1,10 +1,10 @@
 {
     "user": "root",
-    "password": "root-mysql-password",
+    "password": "2006",
     "database": "cbse_questions",
     "available_subjects": [ "physics" ],
     "section_headers": {
-        "mcq": "\nSECTION: A \nThe following questions are multiple-choice questions with one correct answer. Each question carries 1 mark each\n\n",
+        "mcq": "\nSECTION: A\nThe following questions are multiple-choice questions with one correct answer. Each question carries 1 mark each\n\n",
         "sa": "\nSECTION: B\nThe following questions are very short answer type questions. Each question carries 2 marks each\n\n",
         "ma": "\nSECTION: C\nThe following questions are short answer type questions. Each question carries 3 marks each\n\n",
         "cb": "\nSECTION: D\nThe following questions are case-study based questions. Each case study carries 4 marks each\n\n",
